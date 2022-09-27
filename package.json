@@ -1,0 +1,42 @@
+{
+  "name": "module_14_challenge",
+  "version": "1.0.0",
+  "description": "packages required for tech blog site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreaRene/tech_blog.git"
+  },
+  "keywords": [
+    "mental health",
+    "support",
+    "mvc",
+    "express",
+    "handlebars",
+    "mysql2",
+    "sequelize"
+  ],
+  "author": "AndreaRene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreaRene/tech_blog/issues"
+  },
+  "homepage": "https://github.com/AndreaRene/tech_blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.2.1",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.23.0"
+  }
+}

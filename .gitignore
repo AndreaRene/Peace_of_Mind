@@ -1,0 +1,5 @@
+.envnode_modules
+.DS_Store
+.env
+package-lock.json
+*.vscode
