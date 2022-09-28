@@ -10,10 +10,7 @@ const enteredUser = "John"
 //this variable will change to content of html for password
 const enteredPass = "Pass"
 
-function handleUsername(username) {
-
-}
-
-function handlePassword(password) {
+//Will return true if input conforms to parameters
+function validateUserInput(userInput, validCharactersString, minLength, maxLength) {
 
 }
