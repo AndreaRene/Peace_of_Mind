@@ -10,10 +10,16 @@ const enteredUser = "John"
 //this variable will change to content of html for password
 const enteredPass = "Pass"
 
-function handleUsername(username) {
-
+function handleUsername(usernameInput, minLen, maxLen) {
+    let username = usernameInput.trim();
+    if(minLen <= username.length && username.length <= maxLen){
+        if(/^[a-zA-Z]+$/.test(username)) {
+            return true;
+        }
+    } else {
+        return false;
+    }
 }
-
-function handlePassword(password) {
-
+function handlePassword(passwordInput, minLen, maxLen) {
+    let password = passwordInput.trim();
 }
