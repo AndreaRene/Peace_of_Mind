@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS pom_db;
+CREATE DATABASE pom_db;
+USE pom_db;
