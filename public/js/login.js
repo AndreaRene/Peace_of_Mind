@@ -16,6 +16,8 @@ function handleUsername(usernameInput, minLen, maxLen) {
         console.log("yeah");
         if(/^[a-zA-Z0-9]+$/.test(username)) {
             return true;
+        } else {
+            return false;
         }
     } else {
         return false;
