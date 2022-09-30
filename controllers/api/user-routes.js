@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.user_id = newUser.id;
             req.session.user_name = newUser.user_name;
-            req.session.loggedIn = true;
+            req.session.logged_in = true;
 
             res.json(newUser);
         });
@@ -35,7 +35,7 @@ router.post('/login', async (req, res) => {
         req.session.save(() => {
             req.session.user_id = user.id;
             req.session.user_name = user.user_name;
-            req.session.loggedIn = true;
+            req.session.logged_in = true;
 
             res.json({ user, message: 'Login successful.' });
         });
@@ -43,3 +43,15 @@ router.post('/login', async (req, res) => {
         res.status(400).json({ message: 'Invalid username or password' });
     };
 });
+
+router.post('/logout', (req, res) => {
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end();
+    };
+});
+
+module.exports = router;
