@@ -8,7 +8,7 @@
 const enteredUser = "Johnny"
 
 //this variable will change to content of html for password
-const enteredPass = "Pass"
+const enteredPass = "Password!$%%"
 
 function handleUsername(usernameInput, minLen, maxLen) {
     let username = usernameInput.trim();
@@ -25,7 +25,7 @@ function handleUsername(usernameInput, minLen, maxLen) {
 function handlePassword(passwordInput, minLen, maxLen) {
     let password = passwordInput.trim();
     if(minLen <= password.length && password.length <= maxLen){
-        if(/^[a-zA-Z0-9]+$/.test(password)) {
+        if(/^[a-zA-Z0-9!#$%\^&*+=\-]+$/.test(password)) {
             return true;
         } else {
             return false;
@@ -37,3 +37,4 @@ function handlePassword(passwordInput, minLen, maxLen) {
 
 //test case
 console.log(handleUsername(enteredUser, 5, 20));
+console.log(handlePassword(enteredPass, 5, 20));
