@@ -13,7 +13,6 @@ const enteredPass = "Pass"
 function handleUsername(usernameInput, minLen, maxLen) {
     let username = usernameInput.trim();
     if(minLen <= username.length && username.length <= maxLen){
-        console.log("yeah");
         if(/^[a-zA-Z0-9]+$/.test(username)) {
             return true;
         } else {
@@ -25,6 +24,15 @@ function handleUsername(usernameInput, minLen, maxLen) {
 }
 function handlePassword(passwordInput, minLen, maxLen) {
     let password = passwordInput.trim();
+    if(minLen <= password.length && password.length <= maxLen){
+        if(/^[a-zA-Z0-9]+$/.test(password)) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
 }
 
 //test case
