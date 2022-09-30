@@ -5,7 +5,7 @@
 //!! This code is for input handling, not for validation
 
 //this variable will change to the content of html form/textbox
-const enteredUser = "John"
+const enteredUser = "Johnny"
 
 //this variable will change to content of html for password
 const enteredPass = "Pass"
@@ -13,7 +13,8 @@ const enteredPass = "Pass"
 function handleUsername(usernameInput, minLen, maxLen) {
     let username = usernameInput.trim();
     if(minLen <= username.length && username.length <= maxLen){
-        if(/^[a-zA-Z]+$/.test(username)) {
+        console.log("yeah");
+        if(/^[a-zA-Z0-9]+$/.test(username)) {
             return true;
         }
     } else {
@@ -23,3 +24,6 @@ function handleUsername(usernameInput, minLen, maxLen) {
 function handlePassword(passwordInput, minLen, maxLen) {
     let password = passwordInput.trim();
 }
+
+//test case
+console.log(handleUsername(enteredUser, 5, 20));
