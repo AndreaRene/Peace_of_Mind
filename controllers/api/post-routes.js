@@ -29,3 +29,24 @@ router.put('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// DELETE message
+router.delete('/:id', withAuth, async (req, res) => {
+    try {
+        const [changes] = Post.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+
+        if (changes > 0) {
+            res.status(200).end();
+        } else {
+            res.status(404).end();
+        }
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+module.exports = router;
