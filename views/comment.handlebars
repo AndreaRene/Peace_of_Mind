@@ -1,0 +1,19 @@
+<div class="card-comment">
+    <div id="comment-history-card">
+        <h2>Remark History</h2>
+        <div id="comment-history">
+            {{#if comment.length}}
+            <div>
+                {{#each comment as |comment|}}
+                {{> editItem comment}}
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    <div id="comment-textarea-card">
+    <h2>comment:</h2>
+    <textarea id="txt-comment" rows="2"></textarea>
+    </div>
+    <input type="button" id="btn-save-comment" value="save">
+</div>
