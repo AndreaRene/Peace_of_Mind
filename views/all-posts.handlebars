@@ -1,13 +1,12 @@
-div>
-  <div>
-    <h2>You are signed in as {{user.user_name}}! </h2>
-  </div>
+<div>
+  <h2>You are signed in as {{user.user_name}}! </h2>
+</div>
 </div>
 <br>
 {{#if posts.length}}
 <div>
   {{#each posts as |post|}}
-  {{> editItem post}}
+  {{> post-partials post}}
   {{/each}}
 </div>
 {{/if}}
