@@ -10,6 +10,6 @@ router.use('/user', userRoutes);
 router.use('/post', postRoutes);
 router.use('/comment', commentRoutes);
 router.use('/dashboard', dashboardRoutes);
-router.use('/about', aboutRoutes);
+router.use('/about', aboutRoutes)
 
 module.exports = router;
