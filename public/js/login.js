@@ -34,7 +34,3 @@ function handlePassword(passwordInput, minLen, maxLen) {
         return false;
     }
 }
-
-//test case
-console.log(handleUsername(enteredUser, 5, 20));
-console.log(handlePassword(enteredPass, 5, 20));
