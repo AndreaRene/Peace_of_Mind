@@ -9,7 +9,7 @@
     </div>
   </div>
   <p class="card-body">
-    {{post.post_text}}
+    {{post.content}}
   </p>
 </div>
 <input type="hidden" name="post-id" value="{{post.id}}" />
@@ -21,6 +21,6 @@
     <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
     <button type="submit" class="btn btn-primary">Submit:</button>
   </form>
-  {{> comments post.comments}}
+  {{> comment-partials post.comments}}
 </div>
 <script src="/js/comment.js"></script>

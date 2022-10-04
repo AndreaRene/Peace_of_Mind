@@ -1,25 +1,39 @@
-<div class="card">
+<section class="d-flex flex-column flex-md-row justify-content-center align-items-center" title="loginCards">
 
-  <h2 class="card-header">LOGIN</h2>
+  <div class="card d-flex flex-column justify-content-center loginCard">
+    <h2 class="card-header postTitles">Log In:</h2>
+    <form class="card-body login-form postTexts login-form">
+      <div class="form-group">
+        <label class="form-label">Username:</label>
+        <input class="form-input d-block" type="text" id="username-input-login" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password:</label>
+        <input class="form-input d-block" type="password" id="password-input-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn loginButtons" type="submit">Log In</button>
+      </div>
 
-  <form class="card-body login-form">
+    </form>
+  </div>
+  <span id="loginOr">Or</span>
+  <div class="card loginCard">
+    <h2 class="card-header postTitles">Sign Up:</h2>
+    <form class="card-body login-form postTexts">
+      <div class="form-group">
+        <label class="form-label">Username:</label>
+        <input class="form-input d-block" type="text" id="username-input-signup" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password:</label>
+        <input class="form-input d-block" type="password" id="password-input-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn loginButtons" type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</section>
 
-    <div class="form-group">
-      <label class="form-label">user_name:</label>
-      <input class="form-input" type="text" id="user_name-input-login" />
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">Password:</label>
-      <input class="form-input" type="password" id="password-input-login" />
-    </div>
-
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">LOGIN</button>
-    </div>
-
-  </form>
-  <br>
-  <a href="/signup">Sign Up Instead</a>
-</div>
-<script src="/js/login.js"></script>
+<script src="/js/loginsignup.js"></script>
