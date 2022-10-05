@@ -31,8 +31,8 @@ const deleteClickHandler = async () => {
         method: 'DELETE'
     });
 
-    // document.location.replace('/api/dashboard');
-    document.location.reload();
+    document.location.replace('/api/dashboard');
+    // document.location.reload();
 };
 document
     .querySelector('#delete-btn')

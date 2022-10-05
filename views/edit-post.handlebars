@@ -1,5 +1,11 @@
-<div class="card">
-    <h2 class="card-header">Edit Post</h2>
+<div class="card posts">
+    <div class="card-header">
+        <h2 class="d-inline">Edit Post</h2>
+        <button class="btn d-inline" form="edit-post-form" type="submit"><img class="icons"
+                src="/imgs/save-icon.png"></button>
+        <button class="btn d-inline" type="submit" form="edit-post-form" id="delete-btn"><img class="icons"
+                src="/imgs/delete-icon.png"></button>
+    </div>
     <form class="card-body" id="edit-post-form">
         <input type="hidden" name="post-id" value="{{post.id}}" />
         <div>
@@ -11,10 +17,6 @@
             <textarea class="form-textarea form-input d-block" name="post-body"
                 data-number="8">{{post.content}}</textarea>
         </div>
-
-        <button class="btn"><img class="icons" src="/imgs/save-icon.png"></button>
-        <a href="/api/dashboard" id="delete-btn"> <img src="/imgs/delete-icon.png" class="icons" alt="delete button"
-                id="deleteBtn"></a>
     </form>
 </div>
 <script src="/js/edit.js"></script>
