@@ -3,15 +3,15 @@
     <form class="card-body" id="new-post-form">
         <input type="hidden" name="post-id" value="{{post.id}}" />
         <div>
-            <label class="form-label">Title</label>
+            <label class="form-label d-block">Title</label>
             <input class="form-input" type="text" name="post-title" />
         </div>
         <div>
-            <label class="form-label">Content</label>
+            <label class="form-label d-block">Content</label>
             <textarea class="form-textarea form-input" name="post-body" data-number="8"></textarea>
         </div>
 
-        <button class="btn">Create Post</button>
+        <button type="submit" class="btn"><img class="icons" src="/imgs/save-icon.png"></button>
     </form>
 </div>
 <script src="/js/new.js"></script>
