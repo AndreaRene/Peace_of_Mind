@@ -4,8 +4,10 @@
         <h5 class="card-title d-inline m-0">
             </a><span class="ms-2">{{title}}</span></h5>
         <div class="d-inline ms-5 userNames">{{format_date date_stamp}}
-            <img src="/imgs/edit-icon.png" class="icons" alt="edit button">
-            <img src="/imgs/delete-icon.png" class="icons" alt="delete button">
+            <a href="/">
+                <img src="/imgs/edit-icon.png" class="icons" alt="edit button" id="editBtn">
+            </a>
+            <img src="/imgs/delete-icon.png" class="icons" alt="delete button" id="deleteBtn">
         </div>
     </div>
     <div class="card-text d-flex align-items-center postTexts">{{content}}</div>
