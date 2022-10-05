@@ -22,17 +22,17 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
-        if (postData) {
+        if (postData.user_id == req.session.user_id) {
             const post = postData.get({ plain: true });
             console.log(post);
             res.render('edit-post', {
                 post,
             });
         } else {
-            res.status(404).end();
+            res.redirect('/')
         }
     } catch (err) {
-        res.redirect('login');
+        res.redirect('/');
     }
 });
 
