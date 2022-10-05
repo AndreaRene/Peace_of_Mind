@@ -43,7 +43,7 @@ router.get('/posts/:id', withAuth, async (req, res) => {
             logged_in: req.session.logged_in
         })
     } catch (error) {
-        res.status(500).json(err.message);
+        res.status(500).json(error.message);
     }
 });
 
