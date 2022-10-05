@@ -1,7 +1,7 @@
 const loginFormHandler = async function (event) {
     event.preventDefault();
   
-    const usernameEl = document.querySelector('#user_name-input-login');
+    const usernameEl = document.querySelector('#username-input-login');
     const passwordEl = document.querySelector('#password-input-login');
   
     const response = await fetch('/api/user/login', {
@@ -14,7 +14,7 @@ const loginFormHandler = async function (event) {
     });
   
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/api/dashboard');
     } else {
       alert('Failed to login');
     }
