@@ -1,8 +1,6 @@
-{{!-- i don't think we need this file --}}
-
 <div class="card-comment">
     <div id="comment-history-card">
-        <h2>Remark History</h2>
+        <h2>Comments</h2>
         <div id="comment-history">
             {{#if comment.length}}
             <div>
@@ -13,9 +11,15 @@
             {{/if}}
         </div>
     </div>
-    <div id="comment-textarea-card">
-        <h2>comment:</h2>
-        <textarea id="txt-comment" rows="2"></textarea>
+    <div class="card">
+        <h2 class="card-header">Share your thoughts:</h2>
+        <form class="card-body" id="new-comment-form">
+            <input type="hidden" name="post-id" value="{{post.id}}" />
+            <div>
+                <label class="form-label d-block">Comment:</label>
+                <textarea class="form-textarea form-input" name="comment-body" data-number="8"></textarea>
+            </div>
+
+            <button type="submit" class="btn"><img class="icons" src="/imgs/save-icon.png"></button>
+        </form>
     </div>
-    <input type="button" id="btn-save-comment" value="save">
-</div>
