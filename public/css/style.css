@@ -7,6 +7,10 @@
 
 }
 
+.icons {
+    width: 2rem;
+}
+
 #pageNav {
     background-color: var(--freshSun);
     font-family: 'Fredoka One', sans-serif;
@@ -19,11 +23,13 @@
     margin-left: 20px;
 }
 
-h1, ul {
+h1,
+ul {
     color: var(--deepForest);
 }
 
-.navbar-nav ul, li {
+.navbar-nav ul,
+li {
     float: right;
 }
 
@@ -123,4 +129,4 @@ nav ul li a:hover:after{
     color: #ffa69e;
     text-shadow: 10px 10px #000000;
     margin-top: 590px;
-} */ 
+} */
