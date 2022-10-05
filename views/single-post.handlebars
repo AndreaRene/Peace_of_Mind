@@ -1,24 +1,23 @@
-<div class="card">
-  <div class="card-header  flex-row justify-space-between">
-    <h2>
-      <div class="col-8">{{post.title}}</div>
-    </h2>
-    <div class="col-3">posted by {{post.user.user_name}} on {{format_date post.date_stamp}}
+<div class="card posts">
+  <div
+    class="d-flex flex-column flex-sm-row d-flex align-items-sm-center justify-content-between align-items-start postTitles">
+    <h2 class="card-title d-inline m-0"><span class="ms-2">{{post.title}}</span></h2>
+    <div class="d-inline ms-5 userNames">Posted by {{user.user_name}} on {{format_date date_stamp}}
     </div>
   </div>
-  <p class="card-body">
-    {{post.content}}
-  </p>
+  <div class="card-text d-flex align-items-center postTexts">{{post.content}}</div>
 </div>
-<input type="hidden" name="post-id" value="{{post.id}}" />
 <div class="card">
-  <div class="card-header"></div>
+  <h4 class="card-header">Share your thoughts:</h4>
   <form class="card-body" id="new-comment-form">
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <div>
+      <textarea class="form-textarea form-input" name="comment-body" data-number="8"></textarea>
+    </div>
 
-    <p class="form-label">Comment:</p>
-    <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
-    <button type="submit" class="btn btn-primary">Submit:</button>
+    <button type="submit" class="btn"><img class="icons" src="/imgs/save-icon.png"></button>
   </form>
-  {{> comment-partials post.comments}}
+</div>
+{{> comment-partials comments}}
 </div>
 <script src="/js/comment.js"></script>
