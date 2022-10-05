@@ -1,7 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+:root {
+    --freshSun: #fac032;
+    --deepForest: #167323;
+    --sand: #efdeb3;
+
+}
+
+#pageNav {
+    background-color: var(--freshSun);
+    font-family: 'Fredoka One', sans-serif;
+}
+
+#pageNav img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+h1, ul {
+    color: var(--deepForest);
+}
+
+.navbar-nav ul, li {
+    float: right;
+}
+
+
+#pageFooter {
+    background-color: var(--deepForest);
+    color: var(--sand);
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 /* General Page Style */
-html{
+/* html{
     scroll-behavior: smooth;
     height: 100%;
     
@@ -88,4 +123,4 @@ nav ul li a:hover:after{
     color: #ffa69e;
     text-shadow: 10px 10px #000000;
     margin-top: 590px;
-}
+} */ 
