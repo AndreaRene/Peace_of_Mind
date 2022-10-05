@@ -1,12 +1,17 @@
-<div class="card posts">
-    <div
-        class="d-flex flex-column flex-sm-row d-flex align-items-sm-center justify-content-between align-items-start postTitles">
-        <h5 class="card-title d-inline m-0"><a href="/post/{{id}}">
-            </a><span class="ms-2">{{title}}</span></h5>
-        <div class="d-inline ms-5">on {{format_date date_stamp}}
-            <img src="/imgs/edit-icon.png" class="icons" alt="edit button">
-            <img src="/imgs/delete-icon.png" class="icons" alt="delete button">
+<div class="card">
+    <h2 class="card-header">Edit Post</h2>
+    <form class="card-body" id="new-post-form">
+        <input type="hidden" name="post-id" value="{{post.id}}" />
+        <div>
+            <label class="form-label">Title</label>
+            <input class="form-input" type="text" name="post-title" />
         </div>
-    </div>
-    <div class="card-text d-flex align-items-center postTexts">{{content}}</div>
+        <div>
+            <label class="form-label">Content</label>
+            <textarea class="form-textarea form-input" name="post-body" data-number="8"></textarea>
+        </div>
+
+        <button class="btn">Create Post</button>
+    </form>
 </div>
+<script src="/js/edit.js"></script>
