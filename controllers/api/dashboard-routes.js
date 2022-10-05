@@ -19,6 +19,14 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+// GET new-post page
+router.get('/new', withAuth, (req, res) => {
+    res.render('new-post', {
+        loggedIn: req.session.loggedIn,
+    });
+});
+
+//GET edit post page
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
@@ -35,6 +43,5 @@ router.get('/edit/:id', withAuth, async (req, res) => {
         res.redirect('/');
     }
 });
-
 
 module.exports = router;
