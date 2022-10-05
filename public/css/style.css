@@ -7,6 +7,10 @@
 
 }
 
+.icons {
+    width: 2rem;
+}
+
 #pageNav {
     background-color: var(--freshSun);
     font-family: 'Fredoka One', sans-serif;

@@ -4,14 +4,15 @@
         <input type="hidden" name="post-id" value="{{post.id}}" />
         <div>
             <label class="form-label">Title</label>
-            <input class="form-input" type="text" name="post-title" />
+            <input class="form-input d-block" type="text" name="post-title" value="{{post.title}}" />
         </div>
         <div>
             <label class="form-label">Content</label>
-            <textarea class="form-textarea form-input" name="post-body" data-number="8"></textarea>
+            <textarea class="form-textarea form-input d-block" name="post-body"
+                data-number="8">{{post.content}}</textarea>
         </div>
 
-        <button class="btn">Save</button>
+        <button class="btn"><img class="icons" src="/imgs/save-icon.png"></button>
     </form>
 </div>
 <script src="/js/edit.js"></script>
