@@ -1,16 +1,17 @@
 <div class="card posts">
     <div
         class="d-flex flex-column flex-sm-row d-flex align-items-sm-center justify-content-between align-items-start postTitles">
+        <input type="hidden" name="post-id" value="{{id}}" />
         <h5 class="card-title d-inline m-0">
             </a><span class="ms-2">{{title}}</span></h5>
         <div class="d-inline ms-5 userNames">{{format_date date_stamp}}
             <a href="/api/dashboard/edit/{{id}}">
                 <img src="/imgs/edit-icon.png" class="icons" alt="edit button" id="editBtn">
             </a>
-            <a href="/api/dashboard/" id="delete-btn"> <img src="/imgs/delete-icon.png" class="icons"
-                    alt="delete button" id="deleteBtn"></a>
+            <a href="/api/dashboard" id="delete-btn"> <img src="/imgs/delete-icon.png" class="icons" alt="delete button"
+                    id="deleteBtn"></a>
         </div>
     </div>
     <div class="card-text d-flex align-items-center postTexts">{{content}}</div>
 </div>
-<script src="/js/edit.js"></script>
+<script src="/js/delete.js"></script>

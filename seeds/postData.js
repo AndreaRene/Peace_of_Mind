@@ -16,7 +16,7 @@ const postdata =
             "title": "I had a really great day",
             "content": "I just wanted to come and tell everyone that today I had a great day. I was able to stay positive for most of the day and not feel the weight crusing down on my shoulders! I'm so happy to have all of you to share with!",
             "user_id": 3
-        }
+        },
     ];
 
 const seedPost = () => Post.bulkCreate(postdata);
