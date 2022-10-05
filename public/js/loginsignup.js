@@ -24,7 +24,7 @@ const loginFormHandler = async function (event) {
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
 
-    const logout = async Function() {
+    const logout = async function() {
       const response = await fetch('api/user/logout', {
         method: 'POST' ,
         headers: {'content-Type': 'application/json'},
