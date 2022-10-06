@@ -58,7 +58,11 @@ ul {
     padding: 1rem;
     background-color: var(--freshSun);
     color: var(--deepForest);
+}
 
+#btnLinks {
+    display: flex;
+    float: right;
 }
 
 #nameLogo {
@@ -180,6 +184,15 @@ nav ul li a:after {
     color: var(--teal);
 }
 
+#delete-btn {
+    font-size: 2rem;
+    color: #626262;
+}
+
+#delete-btn:hover {
+    color: red
+}
+
 .buttons a {
     color: #626262;
     justify-content: space-between;
@@ -271,4 +284,15 @@ input {
 
 #newTitle {
     font-size: 3rem;
+}
+
+.postTitles,
+.postTexts {
+    margin: 0 2rem;
+}
+
+#cardComment {
+    width: 75%;
+    margin: 3rem auto;
+    background-color: var(--sand);
 }
