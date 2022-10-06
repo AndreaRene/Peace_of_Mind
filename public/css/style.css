@@ -277,6 +277,6 @@ input {
     justify-content: center;
 }
 
-#aboutBoxes {
-    margin: auto;
+.aboutBox h1 {
+    color: var(--deepForest);
 }
