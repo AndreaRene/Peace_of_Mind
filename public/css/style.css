@@ -286,6 +286,21 @@ input {
     font-size: 3rem;
 }
 
+
+.aboutImgs {
+    width: 90%;
+}
+
+.aboutBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutBox h1 {
+    color: var(--deepForest);
+
 .postTitles,
 .postTexts {
     margin: 0 2rem;
@@ -295,4 +310,5 @@ input {
     width: 75%;
     margin: 3rem auto;
     background-color: var(--sand);
+
 }
