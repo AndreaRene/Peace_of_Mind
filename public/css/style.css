@@ -124,3 +124,19 @@ nav ul li a:hover:after{
     text-shadow: 10px 10px #000000;
     margin-top: 590px;
 } */ 
+
+/* CSS All POST*/
+.card {
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+.post-title {
+    background-color: #1F7A8C;
+    color: #f5f5f5;
+}
+
+.user-info {
+    margin-right: 5px;
+}
