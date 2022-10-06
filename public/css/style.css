@@ -58,7 +58,11 @@ ul {
     padding: 1rem;
     background-color: var(--freshSun);
     color: var(--deepForest);
+}
 
+#btnLinks {
+    display: flex;
+    float: right;
 }
 
 #nameLogo {
@@ -149,12 +153,8 @@ nav ul li a:after {
 }
 
 .post-container {
-    /* width: 75%; */
-    /* background: #ffffff; */
     border-radius: 6px;
-    /* padding: 20px; */
     color: #626262;
-    /* margin: 20px 0; */
 }
 
 
@@ -173,6 +173,24 @@ nav ul li a:after {
 .post-text {
     font-family: 'montserrat', sans-serif;
     color: #000;
+}
+
+#saveBtn {
+    font-size: 2rem;
+    color: #626262;
+}
+
+#saveBtn:hover {
+    color: var(--teal);
+}
+
+#delete-btn {
+    font-size: 2rem;
+    color: #626262;
+}
+
+#delete-btn:hover {
+    color: red
 }
 
 .buttons a {
@@ -238,6 +256,8 @@ nav ul li a:after {
     text-align: center;
 }
 
+
+
 #newPost {
     background-color: var(--freshSun);
 }
@@ -266,6 +286,7 @@ input {
     font-size: 3rem;
 }
 
+
 .aboutImgs {
     width: 90%;
 }
@@ -279,4 +300,15 @@ input {
 
 .aboutBox h1 {
     color: var(--deepForest);
+
+.postTitles,
+.postTexts {
+    margin: 0 2rem;
+}
+
+#cardComment {
+    width: 75%;
+    margin: 3rem auto;
+    background-color: var(--sand);
+
 }
