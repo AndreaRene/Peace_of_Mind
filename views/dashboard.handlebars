@@ -1,9 +1,12 @@
-<div>
+<div class="signedIn">
     <h2>You are signed in as {{session.user_name}}! </h2>
 </div>
-<a href="/api/dashboard/new">
-    New Post
-</a>
+
+<div id="newPost">
+    <a href="/api/dashboard/new">
+        <i class="fa-solid fa-plus"></i> New Post
+    </a>
+</div>
 <br>
 {{#if posts.length}}
 <div>

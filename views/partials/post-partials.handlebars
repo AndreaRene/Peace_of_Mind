@@ -1,11 +1,14 @@
-<div class="card posts">
-  <div
-    class="d-flex flex-column flex-sm-row d-flex align-items-sm-center justify-content-between align-items-start postTitles">
-    <h5 class="card-title d-inline m-0"> <a href="/posts/{{id}}">
-        <img src="/imgs/comment.png" class="icons" alt="comment button">
-      </a><span class="ms-2">{{title}}</span></h5>
-    <div class="d-inline ms-5 userNames">{{user.user_name}} on {{format_date date_stamp}}
+<div class="card d-flex justify-content-center align-items-center posts">
+  <div class="card-body post-container">
+    <h4 class="card-title mb-2 feeling-title">
+      {{title}}
+    </h4>
+    <h6 class="card-subtitle mb-3 username-date">
+      {{user.user_name}} on {{format_date date_stamp}}
+    </h6>
+    <p class="card-text post-text">{{content}}</p>
+    <div class="buttons">
+      <a href="/posts/{{id}}"><i class="fa-solid fa-comment"></i></a>
     </div>
   </div>
-  <div class="card-text d-flex align-items-center postTexts">{{content}}</div>
 </div>
