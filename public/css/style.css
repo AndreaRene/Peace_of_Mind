@@ -276,3 +276,7 @@ input {
     align-items: center;
     justify-content: center;
 }
+
+#aboutBoxes {
+    margin: auto;
+}
