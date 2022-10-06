@@ -300,6 +300,7 @@ input {
 
 .aboutBox h1 {
     color: var(--deepForest);
+}
 
 .postTitles,
 .postTexts {
@@ -311,4 +312,20 @@ input {
     margin: 3rem auto;
     background-color: var(--sand);
 
+}
+
+.align-items-center {
+    align-items: flex-start !important;
+}
+
+.darkmode--activated .darkmode-background {
+    background: #000;
+}
+
+.darkmode--activated .posts, .darkmode--activated .loginCard, .darkmode--activated .signedIn, .darkmode--activated #newPost, .darkmode--activated #topNav, .darkmode--activated #pageFooter {
+    background-color: #2e2e2e;    
+}
+
+.darkmode--activated a,.darkmode--activated .nav-title, .darkmode--activated .post-text, .darkmode--activated .form-label, .darkmode--activated .feeling-title {
+    color: #fff !important;
 }
