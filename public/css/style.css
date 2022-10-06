@@ -7,6 +7,10 @@
 
 }
 
+.aboutImg {
+    max-width: 90%;
+}
+
 .icons {
     width: 2rem;
 }
