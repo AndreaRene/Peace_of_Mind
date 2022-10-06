@@ -125,18 +125,29 @@ nav ul li a:hover:after{
     margin-top: 590px;
 } */ 
 
-/* CSS All POST*/
-.card {
+.posts {
     height: auto;
     margin: 10px;
     padding: 10px;
 }
 
-.post-title {
+.postTitles{
     background-color: #1F7A8C;
     color: #f5f5f5;
+    padding: 5px;
+
 }
 
-.user-info {
+.userNames {
     margin-right: 5px;
+}
+
+.loginButtons{
+    background-color: #022b3a; 
+    color: #f5f5f5f5;
+    margin-top: 6px;
+}
+
+.loginCard{
+    margin:10px;
 }
