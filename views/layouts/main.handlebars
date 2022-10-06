@@ -12,34 +12,43 @@
 </head>
 
 <body class="d-flex flex-column justify-content-between">
-    <nav class="navbar navbar-expand" id="pageNav">
-        {{!-- <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between"> --}}
-            <h1 id="brand"><a href="/">Peace of Mind</a></h1>
-            <ul class="navbar-nav nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link navLink" href="/api/about"> About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navLink" href="/">Community</a>
-                </li>
-                <li class="nav-item"><a class="nav-link navLink" href="/api/dashboard">
+    <header>
+        <nav id="topNav">
+            <div id="nameLogo">
+                <img class="nav-icon" src="/imgs/noun-peace-4489687-167323.png">
+                <h1 class="nav-title d-none d-md-inline">PEACE OF MIND</h1>
+            </div>
+
+            <ul id="navList">
+                <li class="navLink d-none d-sm-inline"><a class="navClick" href="/api/about"><i
+                            class="fa-solid fa-circle-question  d-none d-md-inline"></i>
+                        About</a></li>
+                <li class="navLink"><a class="navClick" href="/"><i
+                            class="fa-solid fa-people-group d-none d-md-inline"></i>
+                        Community</a></li>
+                <li class="navLink"><a class="navClick" href="/api/dashboard"><i
+                            class="fa-solid fa-clipboard d-none d-md-inline"></i>
                         Dashboard</a></li>
                 {{#if session.logged_in}}
-                <li class="nav-item"><a class="nav-link navLink" href="#" id="logout-link">Logout</a></li>
+                <li class="login-signup navLink"><a class="navClick" href="/logout" class="login-link"
+                        id="logout-link"><span class="d-none d-md-inline">
+                            Logout </span><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
                 {{else}}
-                <li class="nav-item"><a class="nav-link navLink" href="/login">Login/Sign-Up</a></li>
+                <li class="login-signup navLink"><a class="navClick" href="/login" class="login-link"><i
+                            class="fa-solid fa-user"></i><span class="d-none d-md-inline">
+                            Login/SignUp</span></a></li>
                 {{/if}}
             </ul>
-            {{!--
-        </div> --}}
-    </nav>
+        </nav>
+    </header>
     <main class="d-flex flex-column mb-3" id="pageMain">
         {{{body}}}
     </main>
     <footer class="flex-column" id="pageFooter">
         <h5 class="text-center"></h5>
-        <p class="text-center">24/7 Suicide and Crisis Lifeline: <a href="tel:988">988</a></p>
-        <p class="text-center">24/7 Suicide and Crisis Lifeline Chat: <a href="https://988lifeline.org/chat/">Lifeline
+        <p class="text-center">24/7 Suicide and Crisis Lifeline: <a class="footerLinks" href="tel:988"> 988</a></p>
+        <p class="text-center">24/7 Suicide and Crisis Lifeline Chat: <a class="footerLinks"
+                href="https://988lifeline.org/chat/"> Lifeline
                 Chat</a></p>
     </footer>
 
