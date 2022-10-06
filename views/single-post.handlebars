@@ -2,7 +2,7 @@
   <div
     class="d-flex flex-column flex-sm-row d-flex align-items-sm-center justify-content-between align-items-start postTitles">
     <h2 class="card-title d-inline m-0"><span class="ms-2">{{post.title}}</span></h2>
-    <div class="d-inline ms-5 userNames">Posted by {{user.user_name}} on {{format_date date_stamp}}
+    <div class="d-inline ms-5 userNames">Posted by {{post.user.user_name}} on {{format_date post.date_stamp}}
     </div>
   </div>
   <div class="card-text d-flex align-items-center postTexts">{{post.content}}</div>
@@ -18,6 +18,10 @@
     <button type="submit" class="btn"><img class="icons" src="/imgs/save-icon.png"></button>
   </form>
 </div>
-{{> comment-partials comments}}
+
+<div>
+  {{#each comments as |comment|}}
+  {{> comment-partials comment}}
+  {{/each}}
 </div>
 <script src="/js/comment.js"></script>

@@ -1,14 +1,14 @@
 <div>
   <div class="card comments">
-    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <input type="hidden" name="post-id" value="{{id}}" />
     <div
       class="d-flex flex-column flex-sm-row d-flex align-items-sm-center justify-content-between align-items-start postTitles">
       <h5 class="card-title d-inline m-0">
-        <span class="ms-2">{{user.user_name}}</span>
+        <span class="ms-2">User: {{user.user_name}}</span>
       </h5>
-      <div class="d-inline ms-5 userNames">{{format_date date_stamp}}
+      <div class="d-inline ms-5 userNames">Posted on: {{format_date date_stamp}}
       </div>
     </div>
-    <div class="card-text d-flex align-items-center postTexts">{{body}}</div>
+    <div class="card-text d-flex align-items-center postTexts">Comment: {{content}}</div>
   </div>
 </div>
