@@ -149,12 +149,8 @@ nav ul li a:after {
 }
 
 .post-container {
-    /* width: 75%; */
-    /* background: #ffffff; */
     border-radius: 6px;
-    /* padding: 20px; */
     color: #626262;
-    /* margin: 20px 0; */
 }
 
 
@@ -173,6 +169,15 @@ nav ul li a:after {
 .post-text {
     font-family: 'montserrat', sans-serif;
     color: #000;
+}
+
+#saveBtn {
+    font-size: 2rem;
+    color: #626262;
+}
+
+#saveBtn:hover {
+    color: var(--teal);
 }
 
 .buttons a {
@@ -237,6 +242,8 @@ nav ul li a:after {
     border-radius: .5rem;
     text-align: center;
 }
+
+
 
 #newPost {
     background-color: var(--freshSun);
