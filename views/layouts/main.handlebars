@@ -13,9 +13,9 @@
 
 <body class="d-flex flex-column justify-content-between">
     <nav class="navbar navbar-expand" id="pageNav">
-        <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between">
+        {{!-- <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between"> --}}
             <h1 id="brand"><a href="/">Peace of Mind</a></h1>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link navLink" href="/api/about"> About</a>
                 </li>
@@ -30,7 +30,8 @@
                 <li class="nav-item"><a class="nav-link navLink" href="/login">Login/Sign-Up</a></li>
                 {{/if}}
             </ul>
-        </div>
+            {{!--
+        </div> --}}
     </nav>
     <main class="d-flex flex-column mb-3" id="pageMain">
         {{{body}}}
