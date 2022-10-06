@@ -1,0 +1,17 @@
+<div class="signedIn">
+    <h2>You are signed in as {{session.user_name}}! </h2>
+</div>
+
+<div id="newPost">
+    <a href="/api/dashboard/new">
+        <i class="fa-solid fa-plus"></i> New Post
+    </a>
+</div>
+<br>
+{{#if posts.length}}
+<div>
+    {{#each posts as |post|}}
+    {{> dashboard-partials post}}
+    {{/each}}
+</div>
+{{/if}}

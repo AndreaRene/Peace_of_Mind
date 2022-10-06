@@ -1,0 +1,24 @@
+<div class="card posts">
+    <div class="card-header">
+        <h1 class="d-inline" id="editHeader">Edit Post</h1>
+        <div id="btnLinks">
+            <button class="btn d-inline" form="edit-post-form" type="submit" id="saveBtn"><i
+                    class="fa-regular fa-square-plus"></i></button>
+            <button class="btn d-inline" type="submit" form="edit-post-form" id="delete-btn"><i
+                    class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+    <form class="card-body" id="edit-post-form">
+        <input type="hidden" name="post-id" value="{{post.id}}" />
+        <div>
+            <label class="form-label">Title</label>
+            <input class="form-input d-block" type="text" name="post-title" value="{{post.title}}" />
+        </div>
+        <div>
+            <label class="form-label">Content</label>
+            <textarea class="form-textarea form-input d-block" name="post-body"
+                data-number="8">{{post.content}}</textarea>
+        </div>
+    </form>
+</div>
+<script src="/js/edit.js"></script>

@@ -1,0 +1,27 @@
+<div class="card posts">
+  <div
+    class="d-flex mt-3 flex-column flex-sm-row d-flex align-items-sm-center justify-content-between align-items-start postTitles">
+    <h2 class="card-title d-inline m-0"><span class="ms-2">{{post.title}}</span></h2>
+    <div class="d-inline ms-5 userNames">Posted by {{post.user.user_name}} on {{format_date post.date_stamp}}
+    </div>
+  </div>
+  <div class="card-text d-flex mt-4 mb-3 align-items-center postTexts">{{post.content}}</div>
+</div>
+<div class="card comments" id="cardComment">
+  <h4 class="card-header">Share your thoughts:</h4>
+  <form class="card-body" id="new-comment-form">
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <div>
+      <textarea class="form-textarea form-input" name="comment-body" data-number="8"></textarea>
+    </div>
+
+    <button type="submit" class="btn" id="saveBtn"><i class="fa-regular fa-square-plus"></i></button>
+  </form>
+</div>
+
+<div>
+  {{#each comments as |comment|}}
+  {{> comment-partials comment}}
+  {{/each}}
+</div>
+<script src="/js/comment.js"></script>

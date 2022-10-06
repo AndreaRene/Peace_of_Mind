@@ -1,0 +1,14 @@
+<div class="card d-flex justify-content-center posts">
+    <div class="card-body post-container">
+        <input type="hidden" name="post-id" value="{{id}}" />
+        <h4 class="card-title mb-2 feeling-title">
+            </a>{{title}}</h4>
+        <h6 class="card-subtitle mb-3 username-date">{{format_date date_stamp}}</h6>
+        <p class="card-text post-text">{{content}}</p>
+        <div class="buttons">
+            <a href="/api/dashboard/edit/{{id}}">
+                <i class="fa-solid fa-pen-nib"></i>
+            </a>
+        </div>
+    </div>
+</div>

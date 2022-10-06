@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Peace of Mind</title>
+</head>
+
+<body class="d-flex flex-column justify-content-between">
+    <header>
+        <nav id="topNav">
+            <div id="nameLogo">
+                <img class="nav-icon" src="/imgs/noun-peace-4489687-167323.png">
+                <h1 class="nav-title d-none d-md-inline">PEACE OF MIND</h1>
+            </div>
+
+            <ul id="navList">
+                <li class="navLink d-none d-sm-inline"><a class="navClick" href="/api/about"><i
+                            class="fa-solid fa-circle-question  d-none d-md-inline"></i>
+                        About</a></li>
+                <li class="navLink"><a class="navClick" href="/"><i
+                            class="fa-solid fa-people-group d-none d-md-inline"></i>
+                        Community</a></li>
+                <li class="navLink"><a class="navClick" href="/api/dashboard"><i
+                            class="fa-solid fa-clipboard d-none d-md-inline"></i>
+                        Dashboard</a></li>
+                {{#if session.logged_in}}
+                <li class="login-signup navLink"><a class="navClick" href="#" class="login-link"
+                        id="logout-link"><span class="d-none d-md-inline">
+                            Logout </span><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+                {{else}}
+                <li class="login-signup navLink"><a class="navClick" href="/login" class="login-link"><i
+                            class="fa-solid fa-user"></i><span class="d-none d-md-inline">
+                            Login/SignUp</span></a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+    <main class="d-flex flex-column mb-3" id="pageMain">
+        {{{body}}}
+    </main>
+    <footer class="flex-column" id="pageFooter">
+        <h5 class="text-center"></h5>
+        <p class="text-center">24/7 Suicide and Crisis Lifeline: <a class="footerLinks" href="tel:988"> 988</a></p>
+        <p class="text-center">24/7 Suicide and Crisis Lifeline Chat: <a class="footerLinks"
+                href="https://988lifeline.org/chat/"> Lifeline
+                Chat</a></p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/6acf3f536f.js" crossorigin="anonymous"></script>
+    <script src="/js/logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            const options = {
+                time: '0.5s',
+                mixColor: '#000',
+                backgroundColor: '#43ADA1',
+                label: '🌓', 
+                autoMatchOsTheme: true 
+            }
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script> 
+</body>
+
+</html>
