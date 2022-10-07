@@ -1,3 +1,5 @@
+// get about page
+
 const router = require('express').Router();
 
 router.get('/', async (req, res) => {

@@ -1,24 +1,38 @@
-# Project2
-placeholder name and description
-- name: Peace Of Mind
-- description: This is a website that freely allows you to speak your mind with no judgement. Good or bad, fellow people from the community will be there to lift your spirits. 
-- allowed to talk to peers who feel the same way as you.
-- a way to let out thoughts and emotions.
-# Technologies and Rescources used 
-- HTML
-- CSS
-- JAVASCRIPT
-- EXPRESS JS
-- JQUERY
-- BOOTSTRAP FRAMEWORK
-- MIRO 
-- COOLOR.CO
-- FONTAWESOME 
-- HANDLEBARS.JS
-- MY SQL
-- MVC MODELS
-- node.js 
-# COLLABORATORS
+# Peace of Mind
+
+Peace of Mind is a website that will allow anyone with a need to connect to others regarding mental health and support. We provide a safe space for everyone to discuss their feelings without fear of retaliation.
+
+Within this project, users have the ability to:
+
+* Login or sign up to the site
+* Make new posts
+* Comment on posts
+* Edit their own posts
+* Delete their own posts
+
+The application is fully responsive and even features a dark mode toggler in the bottom right corner. 
+
+## Instalation
+
+While Peace of mind was developed to use on a deployed website, you can certainly clone the repo. You will need to install the npm packages (npm i) and source the database in mysql(SOURCE db/schema.sql). Then you'll want to exit mysql(exit) run the seeds(npm run seed) before starting the server. 
+
+## Technologies and Rescources used 
+* HTML
+* CSS
+* JavaScript
+* JQuery
+* Express.js
+* Bootstrap
+* handlebars.js
+* mySql2
+* node.js
+* [FontAwesome](https://fontawesome.com/): A comprehensive icon collection.
+* [unsplash](https://unsplash.com/): A comprehensive photo collection.
+* [Miro](https://miro.com/about/): A visual colaboration and whiteboard platform for planning/wireframing. 
+* [Coolors.co](https://coolors.co/): A color palatte generator.
+* [The Noun Project](https://thenounproject.com/): A comprehensive icon collection. 
+
+## COLLABORATORS
 - Andrea Rene 
 - Javier Guevara
 - Mariana Hernandez 
@@ -27,5 +41,16 @@ placeholder name and description
 - Parker Gay 
 - Rowen Schroeder 
 - Alaya Guajardo 
+
+# A look at our app
+
+## Mobile
+
+![App at moblie size](imgs/pom_app_screenshot.PNG)
+
+## Desktop
+
+![App on desktop](imgs/pom_app_desktop.PNG)
+
 # A Message From The Creators
-- We hope here you find not only comfort in being able to speak freely, but comfort in others to help you get through hard times not alone!
+We hope here you find not only comfort in being able to speak freely, but comfort in others to help you get through hard times not alone!

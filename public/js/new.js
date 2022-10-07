@@ -1,6 +1,6 @@
 const newFormHandler = async function (event) {
     event.preventDefault();
-
+    // create new post
     const title = document.querySelector('input[name="post-title"]').value;
     const content = document.querySelector('textarea[name="post-body"]').value;
 

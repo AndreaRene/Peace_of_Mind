@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* universal styling */
+
 :root {
     --freshSun: #fac032;
     --deepForest: #167323;
@@ -12,13 +14,6 @@
 
 }
 
-/* Main Handlebars Styling */
-html {
-    scroll-behavior: smooth;
-    height: 100%;
-
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -26,8 +21,10 @@ html {
     font-family: 'Fredoka One', sans-serif;
 }
 
-a {
-    text-decoration: none;
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+
 }
 
 body {
@@ -37,14 +34,72 @@ body {
     padding-top: 6rem;
 }
 
-input,
-textarea {
-    font-family: 'montserrat', sans-serif;
-}
-
 ul {
     list-style: none;
 }
+
+/* anchors and buttons */
+
+a {
+    text-decoration: none;
+}
+
+nav ul li a,
+#newPost a {
+    color: var(--deepForest);
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+#newPost a:hover {
+    color: #fff;
+}
+
+nav ul li a:after {
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: .3s;
+    bottom: 0;
+}
+
+.buttons a {
+    color: #626262;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.buttons a:hover {
+    color: #58c3b7;
+}
+
+
+#btnLinks {
+    display: flex;
+    float: right;
+}
+
+#saveBtn {
+    font-size: 2rem;
+    color: #626262;
+}
+
+#saveBtn:hover {
+    color: var(--teal);
+}
+
+#delete-btn {
+    font-size: 2rem;
+    color: #626262;
+}
+
+#delete-btn:hover {
+    color: red
+}
+
+/* navigation */
 
 #topNav {
     position: fixed;
@@ -60,10 +115,6 @@ ul {
     color: var(--deepForest);
 }
 
-#btnLinks {
-    display: flex;
-    float: right;
-}
 
 #nameLogo {
     display: flex;
@@ -95,26 +146,24 @@ ul {
     float: left;
 }
 
-nav ul li a,
-#newPost a {
+/* about page */
+
+.aboutImgs {
+    width: 90%;
+}
+
+.aboutBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutBox h1 {
     color: var(--deepForest);
-    padding: 5px 0;
-    text-decoration: none;
-
 }
 
-nav ul li a:hover,
-#newPost a:hover {
-    color: #fff;
-}
-
-nav ul li a:after {
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: .3s;
-    bottom: 0;
-}
+/* login styling */
 
 .login-signup {
     border: 1px solid #43ada1;
@@ -128,85 +177,6 @@ nav ul li a:after {
 
 .login-link:hover {
     color: #249255;
-}
-
-#pageFooter {
-    background-color: var(--deepForest);
-    color: var(--sand);
-}
-
-.footerLinks {
-    color: var(--burnt);
-    margin-left: .5rem;
-}
-
-.footerLinks:hover {
-    color: var(--sand);
-}
-
-/*Post Partials Styling*/
-.posts {
-    margin: 2rem auto;
-    width: 75%;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-    background-color: var(--sand);
-}
-
-.post-container {
-    border-radius: 6px;
-    color: #626262;
-}
-
-
-.username-date {
-    color: var(--green);
-}
-
-.user-profile {
-    background-color: var(--deepForest);
-}
-
-.feeling-title {
-    color: var(--deepForest);
-}
-
-.post-text {
-    font-family: 'montserrat', sans-serif;
-    color: #000;
-}
-
-#saveBtn {
-    font-size: 2rem;
-    color: #626262;
-}
-
-#saveBtn:hover {
-    color: var(--teal);
-}
-
-#delete-btn {
-    font-size: 2rem;
-    color: #626262;
-}
-
-#delete-btn:hover {
-    color: red
-}
-
-.buttons a {
-    color: #626262;
-    justify-content: space-between;
-    padding: 10px;
-    font-size: 2rem;
-}
-
-.buttons a:hover {
-    color: #58c3b7;
-}
-
-.card-header {
-    font-size: 22px;
-    color: #167323;
 }
 
 #loginOr {
@@ -242,6 +212,69 @@ nav ul li a:after {
     background-color: var(--sand);
 }
 
+/*Post and comment Styling*/
+
+.posts {
+    margin: 2rem auto;
+    width: 75%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    background-color: var(--sand);
+}
+
+.post-container {
+    border-radius: 6px;
+    color: #626262;
+}
+
+
+.username-date {
+    color: var(--green);
+}
+
+.user-profile {
+    background-color: var(--deepForest);
+}
+
+.feeling-title {
+    color: var(--deepForest);
+}
+
+.post-text {
+    font-family: 'montserrat', sans-serif;
+    color: #000;
+}
+
+.card-header {
+    font-size: 22px;
+    color: #167323;
+}
+
+#postCard {
+    width: 65%;
+}
+
+#newTitle {
+    font-size: 3rem;
+}
+
+.postTitles,
+.postTexts {
+    margin: 0 2rem;
+}
+
+#cardComment {
+    width: 75%;
+    margin: 3rem auto;
+    background-color: var(--sand);
+}
+
+/* input new/edit styling */
+
+input,
+textarea {
+    font-family: 'montserrat', sans-serif;
+}
+
 .icons {
     width: 3rem;
 }
@@ -256,8 +289,6 @@ nav ul li a:after {
     text-align: center;
 }
 
-
-
 #newPost {
     background-color: var(--freshSun);
 }
@@ -271,10 +302,6 @@ textarea {
 
 }
 
-#postCard {
-    width: 65%;
-}
-
 input {
     width: 100%;
     height: 3rem;
@@ -282,50 +309,45 @@ input {
     border-radius: .5rem;
 }
 
-#newTitle {
-    font-size: 3rem;
-}
-
-
-.aboutImgs {
-    width: 90%;
-}
-
-.aboutBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.aboutBox h1 {
-    color: var(--deepForest);
-}
-
-.postTitles,
-.postTexts {
-    margin: 0 2rem;
-}
-
-#cardComment {
-    width: 75%;
-    margin: 3rem auto;
-    background-color: var(--sand);
-
-}
-
 .align-items-center {
     align-items: flex-start !important;
 }
+
+/* footer */
+
+#pageFooter {
+    background-color: var(--deepForest);
+    color: var(--sand);
+}
+
+.footerLinks {
+    color: var(--burnt);
+    margin-left: .5rem;
+}
+
+.footerLinks:hover {
+    color: var(--sand);
+}
+
+/* darkmode */
 
 .darkmode--activated .darkmode-background {
     background: #000;
 }
 
-.darkmode--activated .posts, .darkmode--activated .loginCard, .darkmode--activated .signedIn, .darkmode--activated #newPost, .darkmode--activated #topNav, .darkmode--activated #pageFooter {
-    background-color: #2e2e2e;    
+.darkmode--activated .posts,
+.darkmode--activated .loginCard,
+.darkmode--activated .signedIn,
+.darkmode--activated #newPost,
+.darkmode--activated #topNav,
+.darkmode--activated #pageFooter {
+    background-color: #2e2e2e;
 }
 
-.darkmode--activated a,.darkmode--activated .nav-title, .darkmode--activated .post-text, .darkmode--activated .form-label, .darkmode--activated .feeling-title {
+.darkmode--activated a,
+.darkmode--activated .nav-title,
+.darkmode--activated .post-text,
+.darkmode--activated .form-label,
+.darkmode--activated .feeling-title {
     color: #fff !important;
 }
