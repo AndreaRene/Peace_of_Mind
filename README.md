@@ -42,5 +42,15 @@ While Peace of mind was developed to use on a deployed website, you can certainl
 - Rowen Schroeder 
 - Alaya Guajardo 
 
+# A look at our app
+
+## Mobile
+
+![App at moblie size](imgs\pom_app_screenshot.PNG)
+
+## Desktop
+
+![App on desktop](imgs\pom_app_desktop.PNG)
+
 # A Message From The Creators
 We hope here you find not only comfort in being able to speak freely, but comfort in others to help you get through hard times not alone!
