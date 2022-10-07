@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// get all posts
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
@@ -9,9 +10,9 @@ router.get('/', async (req, res) => {
                 model: User,
                 attributes: ['user_name'],
             },
-        ],
+            ],
         });
-        const posts = postData.map((post) => post.get({plain: true}));
+        const posts = postData.map((post) => post.get({ plain: true }));
         res.render('all-posts', {
             posts,
             logged_in: req.session.logged_in
@@ -21,21 +22,22 @@ router.get('/', async (req, res) => {
     }
 });
 
+// get post by id with comments
 router.get('/posts/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [{
                 model: User,
-                attributes: {exclude: ['password']}
+                attributes: { exclude: ['password'] }
             },
             {
                 model: Comment,
                 include: {
                     model: User,
-                    attributes: {exclude: ['password']}
+                    attributes: { exclude: ['password'] }
                 }
             },
-        ],
+            ],
         });
         const commentText = await Comment.findAll({
             where: {
@@ -43,12 +45,12 @@ router.get('/posts/:id', withAuth, async (req, res) => {
             },
             include: [{
                 model: User,
-                attributes: {exclude: ['password']}
+                attributes: { exclude: ['password'] }
             }
-        ],
+            ],
         });
         const comments = commentText.map((comment) => comment.get({ plain: true }));
-        const post = postData.get({plain: true});
+        const post = postData.get({ plain: true });
         res.render('single-post', {
             comments,
             post,
@@ -59,13 +61,15 @@ router.get('/posts/:id', withAuth, async (req, res) => {
     }
 });
 
+// get login sign up page
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
         return;
     }
-  
+
     res.render('login');
 });
-  
+
 module.exports = router;
