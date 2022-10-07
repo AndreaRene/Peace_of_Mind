@@ -1,3 +1,5 @@
+// login
+
 const loginFormHandler = async function (event) {
   event.preventDefault();
 
@@ -19,6 +21,8 @@ const loginFormHandler = async function (event) {
     alert('Failed to login');
   }
 };
+
+// signup
 
 const signupFormHandler = async function (event) {
   event.preventDefault();
