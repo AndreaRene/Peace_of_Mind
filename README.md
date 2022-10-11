@@ -10,7 +10,7 @@ Within this project, users have the ability to:
 * Edit their own posts
 * Delete their own posts
 
-The application is fully responsive and even features a dark mode toggler in the bottom right corner. 
+The application is fully responsive and even features a dark mode toggler in the bottom right corner. You can find the deployed app at https://peace-of-mind-app.herokuapp.com/
 
 ## Instalation
 
